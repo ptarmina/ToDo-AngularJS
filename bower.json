@@ -1,0 +1,14 @@
+{
+  "name": "todo-v1",
+  "description": "ToDo Application built in AngularJS v 1.6.7",
+  "main": "app.js",
+  "license": "ISC",
+  "homepage": "https://github.com/ptarmina/ToDo-AngularJS",
+    "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "html5-boilerplate": "^5.3.0"
+  }
+}

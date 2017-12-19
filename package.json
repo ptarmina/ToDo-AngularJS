@@ -1,0 +1,24 @@
+{
+  "name": "todo-v1",
+  "version": "1.0.0",
+  "description": "ToDo Application built in AngularJS v 1.6.7",
+  "main": "app.js",
+  "dependencies": {
+    "angular": "^1.6.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptarmina/ToDo-AngularJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ptarmina/ToDo-AngularJS/issues"
+  },
+  "homepage": "https://github.com/ptarmina/ToDo-AngularJS#readme"
+}
