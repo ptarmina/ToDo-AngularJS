@@ -1,0 +1,17 @@
+<h1>ToDo View</h1>
+<h2>Complete: {{completed}}%</h2>
+<chart-component data="'{{completed}}'"></chart-component>
+<div>
+  <form>
+    <input type="text" ng-model="new_todo">
+    <button type="submit" ng-click="addToDo()">Add ToDo</button>
+  </form>
+	<p ng-repeat="todo in data.todos">{{todo.title}}
+
+	<button ng-click="removeToDo(todo)">remove</button>
+
+  <label>Complete:
+    <input type="checkbox" ng-model="todo.complete" ng-change="toggleComplete(todo)">
+  </label>
+	</p>
+</div>

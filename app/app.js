@@ -1,12 +1,19 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.main-view'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+angular.module('myApp', ['ngRoute'])
 
-  $routeProvider.otherwise({redirectTo: '/main-view'});
-}]);
+.config(function($routeProvider,$locationProvider) {
+	$locationProvider.hashPrefix('!');
+
+	$routeProvider
+	.when('/todo-view', {
+		controller: 'ToDoCtrl',
+		templateUrl: 'views/todo-view.html'
+
+	 })
+	 .when('/', {
+			controller: 'ToDoCtrl',
+			templateUrl: 'views/todo-view.html'
+		})
+		.otherwise({ redirect: '/todo-view' });
+});
