@@ -44,5 +44,9 @@ angular
 			$scope.completed = todoService.percent();
 		}
 
+		$scope.getPercentage = function(){
+			return $scope.completed;
+		}
+
 		$scope.getToDos();
 });

@@ -1,1 +1,147 @@
 /* app css stylesheet */
+
+body {
+	background-color: #48494b;
+	color: #fff;
+	text-decoration: none;
+}
+h2{
+	padding: 0px;
+	margin: 0px;
+}
+
+header{
+	width: 100%;
+	height: 120px;
+	background-color: #000;
+}
+
+.logo img{
+		padding-top: 30px;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto auto;
+}
+
+/*
+header{
+	width: 100%;
+	height: 220px;
+	background-color: #000;
+}
+
+.logo img{
+		padding-top: 120px;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto auto;
+}
+*/
+
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin-left: 0;
+}
+
+li {
+	background-color: #6699cc;
+}
+
+.todo{
+	padding: 0px;
+	height: 50px;
+	border-bottom: 2px solid #193e56;
+}
+
+.todo-item{
+	padding: 10px;
+	line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.add-todo{
+	padding: 0px;
+	height: 50px;
+	border-bottom: 2px solid #193e56;
+	background-color: #fff;
+}
+
+.add-todo input {
+	width: 89%;
+	height: 48px;
+	color: #000;
+	border:none;
+}
+
+.add-input{
+		padding: 0px 10px;
+    white-space: nowrap;
+}
+
+.add-btn{
+	height: 48px;
+	width: 5%;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	color: #fff;
+	background-color: #baa623;
+}
+
+.todo .delete-btn{
+	height: 48px;
+	width: 20px;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	background-color: #4979aa;
+}
+
+.todo .complete-btn{
+	height: 48px;
+	width: 20px;
+	background-color: #b62f0f;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.col-md-4{
+	padding: 0px;
+	margin: 0px;
+}
+
+.progress {
+    height: 20px;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    background-color: #302e2e;
+}
+
+.progress-bar{
+	background-color: #d26c77;
+}
+
+label {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 50px;
+	margin-left: 4px;
+	cursor: auto;
+}
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f10C"; } /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\F058"; } /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */

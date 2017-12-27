@@ -20,7 +20,7 @@ angular
 		}
 
 		service.add = function(todo){
-			data.todos.push(todo);
+			data.todos.unshift(todo);
 			_add(data.todos);
 
 			return data.todos;
@@ -53,6 +53,7 @@ angular
 
 			return completed;
 		};
+
 
   	return service;
 });

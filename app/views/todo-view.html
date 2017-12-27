@@ -1,17 +1,42 @@
-<h1>ToDo View</h1>
-<h2>Complete: {{completed}}%</h2>
-<chart-component data="'{{completed}}'"></chart-component>
-<div>
-  <form>
-    <input type="text" ng-model="new_todo">
-    <button type="submit" ng-click="addToDo()">Add ToDo</button>
-  </form>
-	<p ng-repeat="todo in data.todos">{{todo.title}}
 
-	<button ng-click="removeToDo(todo)">remove</button>
-
-  <label>Complete:
-    <input type="checkbox" ng-model="todo.complete" ng-change="toggleComplete(todo)">
-  </label>
-	</p>
+<header>
+  <div class="logo">
+    <img src="img/title.png">
+  </div>
+  <chart-component data="'{{completed}}'"></chart-component>
+</header>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" ng-style="{width : ( getPercentage() + '%' ) }";>
+    {{completed}}%
+  </div>
 </div>
+
+<section>
+  <div class="add-todo">
+    <form>
+        <button class="add-btn pull-left" type="submit" aria-label="Add ToDo" ng-click="addToDo()">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+        <span>
+        <input class="add-input" type="text" ng-model="new_todo" placeholder="New ToDo Title" maxlength="30" >
+        </span>
+    </form>
+  </div>
+</section>
+
+<section>
+  <ul>
+  	<li class="todo" ng-repeat="todo in data.todos">
+    <div class="complete-btn pull-left">
+      <input id="'box'+{{$index}}" type="checkbox" ng-model="todo.complete" ng-change="toggleComplete(todo)">
+      <label for="'box'+{{$index}}"></label>
+    </div>
+
+    <span class="todo-item">{{todo.title}}</span>
+
+    <button type="button" class="delete-btn pull-right" aria-label="Left Align" ng-click="removeToDo(todo)">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </button>
+  </li>
+  </ul>
+</section>
